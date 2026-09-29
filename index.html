@@ -14,7 +14,6 @@
     -webkit-font-smoothing: antialiased;
     display: flex;
     justify-content: center;
-    padding: 0;
     margin: 0;
   }
   .phone {
@@ -82,23 +81,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 16px;
+    padding: 14px 10px;
     background: #fff;
-    margin: 0;
     border-bottom: 1px solid #eaeef2;
-    position: relative;
   }
   .route-node { text-align: center; flex: 1; }
   .route-node .dot {
-    width: 12px; height: 12px;
+    width: 11px; height: 11px;
     border-radius: 50%;
     margin: 0 auto 5px;
     border: 2px solid #fff;
     box-shadow: 0 0 0 2px currentColor;
   }
-  .route-node .nm { font-size: 11.5px; font-weight: 800; color: #2c3e50; }
-  .route-node .km { font-size: 9.5px; color: #95a5a6; margin-top: 1px; }
-  .route-sep { color: #cdd5dc; font-size: 14px; font-weight: 300; padding: 0 2px; }
+  .route-node .nm { font-size: 10.5px; font-weight: 800; color: #2c3e50; }
+  .route-node .km { font-size: 9px; color: #95a5a6; margin-top: 1px; }
+  .route-sep { color: #cdd5dc; font-size: 13px; font-weight: 300; }
 
   /* ===== 每日卡片 ===== */
   .days { padding: 14px 12px 0; }
@@ -136,14 +133,14 @@
     position: relative; z-index: 1;
   }
   .day-head .dt { position: relative; z-index: 1; flex: 1; }
-  .day-head .dt h3 { font-size: 15.5px; font-weight: 800; }
-  .day-head .dt .meta { font-size: 11px; opacity: 0.88; margin-top: 2px; }
+  .day-head .dt h3 { font-size: 15px; font-weight: 800; }
+  .day-head .dt .meta { font-size: 10.5px; opacity: 0.88; margin-top: 2px; }
   .day-head .km-badge {
     position: relative; z-index: 1;
     background: rgba(255,255,255,0.22);
-    padding: 4px 10px;
+    padding: 4px 9px;
     border-radius: 14px;
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 800;
     white-space: nowrap;
   }
@@ -156,22 +153,23 @@
     display: flex;
     gap: 10px;
     padding: 4px 0;
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 12.5px;
+    line-height: 1.55;
   }
   .tl-item .t {
     font-weight: 800;
     color: #2e86c1;
     min-width: 52px;
-    font-size: 12px;
+    font-size: 11.5px;
     padding-top: 1px;
+    flex-shrink: 0;
   }
   .tl-item .d { color: #4a5568; flex: 1; }
   .tl-item .d strong { color: #c0392b; }
 
-  /* ===== 分区标题 ===== */
+  /* 分区标题 */
   .sec-title {
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 800;
     color: #0b3d5c;
     margin: 14px 0 8px;
@@ -181,28 +179,26 @@
   }
   .sec-title:first-child { margin-top: 0; }
 
-  /* ===== 美食列表 ===== */
-  .food-list {
-    display: flex; flex-wrap: wrap; gap: 6px;
-  }
+  /* 美食 */
+  .food-list { display: flex; flex-wrap: wrap; gap: 6px; }
   .food-tag {
     background: #fef3e2;
     color: #b8651a;
     padding: 5px 11px;
     border-radius: 12px;
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 600;
     line-height: 1.4;
   }
   .food-tag .note {
     display: block;
-    font-size: 10px;
+    font-size: 9.5px;
     color: #c98a4b;
     font-weight: 400;
     margin-top: 1px;
   }
 
-  /* ===== 景点列表 ===== */
+  /* 景点 */
   .spot-item {
     background: #f7f9fb;
     border-radius: 10px;
@@ -212,7 +208,7 @@
   }
   .spot-item:last-child { margin-bottom: 0; }
   .spot-item .sname {
-    font-size: 12.5px;
+    font-size: 12px;
     font-weight: 800;
     color: #2c3e50;
     display: flex;
@@ -220,42 +216,59 @@
     gap: 5px;
     flex-wrap: wrap;
   }
-  .spot-item .sname .star {
-    font-size: 10px;
-    color: #e67e22;
-    font-weight: 700;
-  }
+  .spot-item .sname .star { font-size: 9.5px; color: #e67e22; font-weight: 700; }
   .spot-item .sline {
-    display: flex;
-    gap: 10px;
-    font-size: 11px;
-    color: #7f8c8d;
-    margin-top: 3px;
-    flex-wrap: wrap;
+    display: flex; gap: 10px;
+    font-size: 10.5px; color: #7f8c8d;
+    margin-top: 3px; flex-wrap: wrap;
   }
   .spot-item .sline .price { color: #c0392b; font-weight: 700; }
   .spot-item .sline .time { color: #2471a3; }
   .spot-item .sdesc {
-    font-size: 11px;
-    color: #6b7a86;
-    margin-top: 4px;
-    line-height: 1.5;
+    font-size: 10.5px; color: #6b7a86;
+    margin-top: 4px; line-height: 1.5;
   }
 
-  /* ===== 提示 ===== */
+  /* 午餐停靠 */
+  .lunch-item {
+    background: #eafaf1;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    border-left: 3px solid #27ae60;
+  }
+  .lunch-item:last-child { margin-bottom: 0; }
+  .lunch-item .lname {
+    font-size: 12px; font-weight: 800; color: #1e8449;
+    display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  }
+  .lunch-item .lname .badge {
+    font-size: 9px; background: #27ae60; color: #fff;
+    padding: 1px 7px; border-radius: 8px; font-weight: 700;
+  }
+  .lunch-item .ltime {
+    font-size: 10.5px; color: #27ae60; font-weight: 700;
+    margin-top: 3px;
+  }
+  .lunch-item .ldesc {
+    font-size: 11px; color: #5d6d7e;
+    margin-top: 4px; line-height: 1.55;
+  }
+
+  /* 提示 */
   .note {
     background: #fef9e7;
     border-left: 3px solid #f39c12;
     padding: 9px 12px;
     border-radius: 0 8px 8px 0;
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 11.5px;
     color: #7d6b47;
     line-height: 1.55;
   }
   .note strong { color: #d35400; }
 
-  /* ===== 返程对比 ===== */
+  /* 返程对比 */
   .compare {
     background: #fff;
     border-radius: 16px;
@@ -267,7 +280,7 @@
     background: #0b3d5c;
     color: #fff;
     padding: 12px 16px;
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 800;
   }
   .compare-body { padding: 12px 14px 14px; }
@@ -276,7 +289,7 @@
     padding: 10px 12px;
     margin-bottom: 8px;
     border-left: 4px solid #ccc;
-    font-size: 12px;
+    font-size: 11.5px;
   }
   .opt:last-child { margin-bottom: 0; }
   .opt.good { background: #eafaf1; border-left-color: #27ae60; }
@@ -287,18 +300,18 @@
     margin-bottom: 4px; flex-wrap: wrap;
   }
   .opt .badge {
-    font-size: 10px; font-weight: 800;
+    font-size: 9.5px; font-weight: 800;
     padding: 2px 7px; border-radius: 10px;
     color: #fff;
   }
   .opt.good .badge { background: #27ae60; }
   .opt.mid .badge { background: #e67e22; }
   .opt.bad .badge { background: #e74c3c; }
-  .opt .onm { font-weight: 800; font-size: 12.5px; color: #2c3e50; }
-  .opt .opath { color: #5d6d7e; font-size: 11.5px; line-height: 1.5; }
+  .opt .onm { font-weight: 800; font-size: 12px; color: #2c3e50; }
+  .opt .opath { color: #5d6d7e; font-size: 11px; line-height: 1.5; }
   .opt .opath strong { color: #c0392b; }
 
-  /* ===== 底线提醒 ===== */
+  /* 底线 */
   .bottom {
     margin: 0 12px 20px;
     background: linear-gradient(135deg, #c0392b, #e74c3c);
@@ -308,25 +321,24 @@
     box-shadow: 0 4px 16px rgba(192,57,43,0.3);
   }
   .bottom h4 {
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 800;
     margin-bottom: 8px;
     display: flex; align-items: center; gap: 6px;
   }
   .bottom ol {
     padding-left: 18px;
-    font-size: 12.5px;
+    font-size: 12px;
     line-height: 1.7;
     opacity: 0.97;
   }
   .bottom ol li { margin-bottom: 3px; }
   .bottom ol li:last-child { margin-bottom: 0; }
 
-  /* ===== 页脚 ===== */
   .foot {
     text-align: center;
     padding: 0 0 24px;
-    font-size: 11px;
+    font-size: 10.5px;
     color: #95a5a6;
     line-height: 1.7;
   }
@@ -335,20 +347,20 @@
 <body>
 <div class="phone">
 
-  <!-- ===== 顶部 ===== -->
+  <!-- 顶部 -->
   <div class="top">
     <h1>🚗 国庆自驾环线</h1>
-    <div class="route">西安 → 达州 → 酉阳 → 重庆 → 广元 → 西安</div>
+    <div class="route">西安 → 黔江 → 酉阳 → 重庆 → 广元 → 西安</div>
     <div class="pills">
       <span class="pill">📅 6天5晚</span>
-      <span class="pill">🛣️ 约1980km</span>
+      <span class="pill">🛣️ 约2050km</span>
       <span class="pill">🌙 不走夜路</span>
       <span class="pill">👨‍👩‍👧 带娃</span>
       <span class="pill">💒 酉阳婚礼</span>
     </div>
   </div>
 
-  <!-- ===== 路线条 ===== -->
+  <!-- 路线条 -->
   <div class="route-bar">
     <div class="route-node" style="color:#0b3d5c;">
       <div class="dot" style="background:#0b3d5c;"></div>
@@ -358,14 +370,14 @@
     <span class="route-sep">›</span>
     <div class="route-node" style="color:#3498db;">
       <div class="dot" style="background:#3498db;"></div>
-      <div class="nm">达州</div>
-      <div class="km">460</div>
+      <div class="nm">黔江</div>
+      <div class="km">681</div>
     </div>
     <span class="route-sep">›</span>
     <div class="route-node" style="color:#27ae60;">
       <div class="dot" style="background:#27ae60;"></div>
       <div class="nm">酉阳</div>
-      <div class="km">290</div>
+      <div class="km">100</div>
     </div>
     <span class="route-sep">›</span>
     <div class="route-node" style="color:#e74c3c;">
@@ -387,48 +399,80 @@
     </div>
   </div>
 
-  <!-- ===== 每日 ===== -->
+  <!-- 每日 -->
   <div class="days">
 
-    <!-- D1 达州 -->
+    <!-- D1 黔江 -->
     <div class="day">
       <div class="day-head" style="background: linear-gradient(135deg, #1a5276, #3498db);">
         <div class="dn">D1</div>
         <div class="dt">
-          <h3>西安 → 达州</h3>
-          <div class="meta">10月1日 · 约5.5-6h</div>
+          <h3>西安 → 黔江</h3>
+          <div class="meta">10月1日 · 约681km · 实际10-11.5h</div>
         </div>
-        <div class="km-badge">460km</div>
+        <div class="km-badge">681km</div>
       </div>
       <div class="day-body">
         <div class="tl">
-          <div class="tl-item"><span class="t">7:00</span><span class="d">西安出发，走G65包茂高速</span></div>
-          <div class="tl-item"><span class="t">10:00</span><span class="d">安康服务区休息</span></div>
-          <div class="tl-item"><span class="t">13:30</span><span class="d">抵达达州，入住酒店</span></div>
-          <div class="tl-item"><span class="t">15:30</span><span class="d">市区闲逛，品尝川东菜</span></div>
+          <div class="tl-item"><span class="t">4:30</span><span class="d">西安出发，走G65包茂高速（避开9-13时出城高峰）</span></div>
+          <div class="tl-item"><span class="t">8:00</span><span class="d">紫阳南服务区休息</span></div>
+          <div class="tl-item"><span class="t">8:30-9:30</span><span class="d"><strong>紫阳南服务区午餐</strong>（详见下方停靠推荐）</span></div>
+          <div class="tl-item"><span class="t">14:00-15:00</span><span class="d">黔江服务区，孩子午休一下</span></div>
+          <div class="tl-item"><span class="t">15:30-16:00</span><span class="d">抵达黔江，入住酒店</span></div>
+          <div class="tl-item"><span class="t">16:30</span><span class="d">前往濯水古镇（约30公里）</span></div>
+          <div class="tl-item"><span class="t">19:00</span><span class="d">看风雨廊桥亮灯，古镇晚饭</span></div>
         </div>
 
-        <div class="sec-title">🍜 达州小吃</div>
+        <div class="sec-title">🍽️ 午餐停靠推荐</div>
+        <div class="lunch-item">
+          <div class="lname"><span class="badge">首选</span>紫阳南服务区</div>
+          <div class="ltime">⏱ 出发后约4-4.5小时 · 8:30-9:30到达</div>
+          <div class="ldesc">2026年新升级重开，餐饮区有连锁快餐和当地小吃，凉皮是不少旅客的推荐。停车位翻倍，带娃下车活动空间够，<strong>全程不下高速</strong>。</div>
+        </div>
+        <div class="lunch-item">
+          <div class="lname"><span class="badge">备选</span>安康西服务区</div>
+          <div class="ltime">⏱ 出发后约3-3.5小时 · 7:30-8:30到达</div>
+          <div class="ldesc">餐厅提供<strong>安康蒸面</strong>等陕南特色小吃，想让孩子尝地道陕南早餐可以选这里。</div>
+        </div>
+        <div class="lunch-item">
+          <div class="lname"><span class="badge">午休</span>黔江服务区</div>
+          <div class="ltime">⏱ 下午14:00-15:00经过</div>
+          <div class="ldesc">设有重庆高速<strong>“司机之家”</strong>，有独立休息空间和躺椅，<strong>免费使用</strong>，让孩子躺一会儿再走最后一段。</div>
+        </div>
+
+        <div class="sec-title">🍜 黔江小吃</div>
         <div class="food-list">
-          <span class="food-tag">宣汉格格<span class="note">竹蒸笼现蒸，非遗</span></span>
-          <span class="food-tag">灯影牛肉<span class="note">薄如蝉翼，伴手礼</span></span>
-          <span class="food-tag">大竹肉丁面<span class="note">臊子鲜嫩，早餐首选</span></span>
-          <span class="food-tag">三汇水八块<span class="note">凉拌鸡，麻辣入味</span></span>
+          <span class="food-tag">黔江鸡杂<span class="note">地标菜，重庆非遗</span></span>
+          <span class="food-tag">濯水绿豆粉<span class="note">手工烙制，滑嫩筋道</span></span>
+          <span class="food-tag">马打滚<span class="note">糯米裹黄豆粉</span></span>
+          <span class="food-tag">地牯牛泡菜<span class="note">脆嫩酸甜，解腻</span></span>
+          <span class="food-tag">牛肉脯<span class="note">武陵山黄牛，带路上吃</span></span>
+          <span class="food-tag">蜂蜜荞粑<span class="note">荞麦香配蜂蜜</span></span>
         </div>
 
-        <div class="sec-title">🎫 达州景点</div>
+        <div class="sec-title">🎫 黔江景点</div>
         <div class="spot-item">
-          <div class="sname">巴山大峡谷 <span class="star">4A</span></div>
-          <div class="sline"><span class="price">120元起</span><span class="time">08:00-18:00</span></div>
-          <div class="sdesc">大象洞+桃溪谷；罗盘顶套票180元含索道</div>
-        </div>
-        <div class="spot-item">
-          <div class="sname">莲花湖湿地公园</div>
+          <div class="sname">濯水古镇 <span class="star">5A</span></div>
           <div class="sline"><span class="price">免费</span><span class="time">全天开放</span></div>
-          <div class="sdesc">适合带孩子散步、休闲</div>
+          <div class="sdesc">世界第一风雨廊桥（658米），19:00-22:00亮灯，夜景是精华</div>
+        </div>
+        <div class="spot-item">
+          <div class="sname">蒲花暗河</div>
+          <div class="sline"><span class="price">60-118元</span><span class="time">08:30-17:00</span></div>
+          <div class="sdesc">喀斯特暗河，乘船穿溶洞天生桥，距古镇10分钟车程</div>
+        </div>
+        <div class="spot-item">
+          <div class="sname">城市大峡谷 <span class="star">4A</span></div>
+          <div class="sline"><span class="price">约60元</span><span class="time">08:30-16:30</span></div>
+          <div class="sdesc">城中的峡谷景观，适合带娃轻徒步</div>
+        </div>
+        <div class="spot-item">
+          <div class="sname">阿蓬江湿地公园</div>
+          <div class="sline"><span class="price">免费（竹筏30元）</span><span class="time">全天开放</span></div>
+          <div class="sdesc">可骑行、徒步或坐竹筏，秋有芦苇，适合亲子</div>
         </div>
 
-        <div class="note">长途驾驶后<strong>不建议跑大景区</strong>，市区吃碗肉丁面或格格，早点休息。</div>
+        <div class="note">下午到黔江后<strong>直接去濯水古镇</strong>，傍晚逛古镇、吃绿豆粉，19:00看风雨廊桥亮灯。第二天上午可顺路看一眼蒲花暗河再出发。<strong>彭水至酉阳段共和隧道、酉黔隧道施工单道双通，可能缓行。</strong></div>
       </div>
     </div>
 
@@ -437,15 +481,16 @@
       <div class="day-head" style="background: linear-gradient(135deg, #1e8449, #27ae60);">
         <div class="dn">D2</div>
         <div class="dt">
-          <h3>达州 → 酉阳</h3>
-          <div class="meta">10月2日 · 约3.5-4h</div>
+          <h3>黔江 → 酉阳</h3>
+          <div class="meta">10月2日 · 约100km · 1.5h</div>
         </div>
-        <div class="km-badge">290km</div>
+        <div class="km-badge">100km</div>
       </div>
       <div class="day-body">
         <div class="tl">
-          <div class="tl-item"><span class="t">9:00</span><span class="d">达州出发前往酉阳</span></div>
-          <div class="tl-item"><span class="t">12:30</span><span class="d">抵达酉阳，入住、午饭</span></div>
+          <div class="tl-item"><span class="t">9:00</span><span class="d">睡到自然醒，酒店早餐</span></div>
+          <div class="tl-item"><span class="t">10:00</span><span class="d">黔江出发前往酉阳（最晚11:00）</span></div>
+          <div class="tl-item"><span class="t">11:30</span><span class="d">抵达酉阳，入住、午饭</span></div>
           <div class="tl-item"><span class="t">14:00</span><span class="d">午休后逛酉州古城</span></div>
           <div class="tl-item"><span class="t">17:30</span><span class="d">晚饭，品尝酉阳特色</span></div>
           <div class="tl-item"><span class="t">20:00</span><span class="d">回酒店早休息</span></div>
@@ -492,7 +537,7 @@
         <div class="dn">D3</div>
         <div class="dt">
           <h3>酉阳婚礼 → 重庆</h3>
-          <div class="meta">10月3日 · 约4-4.5h</div>
+          <div class="meta">10月3日 · 约340km · 4-4.5h</div>
         </div>
         <div class="km-badge">340km</div>
       </div>
@@ -536,7 +581,7 @@
         <div class="dn">D5</div>
         <div class="dt">
           <h3>重庆半天 → 广元</h3>
-          <div class="meta">10月5日 · 约5h</div>
+          <div class="meta">10月5日 · 约390km · 5h</div>
         </div>
         <div class="km-badge">390km</div>
       </div>
@@ -590,7 +635,7 @@
         <div class="dn">D6</div>
         <div class="dt">
           <h3>广元 → 西安</h3>
-          <div class="meta">10月6日 · 约6.5-7h</div>
+          <div class="meta">10月6日 · 约500km · 6.5-7h</div>
         </div>
         <div class="km-badge">约500km</div>
       </div>
@@ -607,7 +652,7 @@
 
   </div>
 
-  <!-- ===== 返程路线对比 ===== -->
+  <!-- 返程路线对比 -->
   <div class="compare">
     <div class="compare-title">🛣️ 广元→西安 路线对比</div>
     <div class="compare-body">
@@ -626,19 +671,18 @@
     </div>
   </div>
 
-  <!-- ===== 底线提醒 ===== -->
+  <!-- 底线 -->
   <div class="bottom">
     <h4>⚠️ 三条不能破的底线</h4>
     <ol>
       <li>10/3 婚礼后最晚 <strong>15:30</strong> 从酉阳出发</li>
       <li>10/5 最晚 <strong>14:00</strong> 从重庆出发去广元</li>
-      <li>10/6 走 <strong>G85银昆+G7011十天</strong>，避开G5汉中管制段，7:00前出发</li>
+      <li>10/6 走 <strong>G85银昆+G7011十天</strong>，7:00前出发</li>
     </ol>
   </div>
 
-  <!-- ===== 页脚 ===== -->
   <div class="foot">
-    全程约1980公里 · 6天5晚 · 不走夜路<br>
+    全程约2050公里 · 6天5晚 · 不走夜路<br>
     祝旅途愉快，一路平安 🚗💨
   </div>
 
